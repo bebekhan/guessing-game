@@ -7,7 +7,7 @@ print '%s I am thinking of a number between 1 and 100, try to guess my number' %
 #guess = raw_input('What is your guess: ')
 secret_num = randint(1, 100)
 guess_count = 0
-
+print secret_num
 while True:
     try:
         guess = int(raw_input("Please enter a number: "))
@@ -26,16 +26,26 @@ while True:
             # break
         else:
             print 'Congratulations %s! You found my number in %s tries!' % (name, guess_count)
+            play_again = raw_input("Would you like to play again? Enter y or n ")
+            play_again.lower()
+            if play_again == 'y':
+                continue
+            elif play_again == 'n':
+                print'Have a good day'
+            else:
+                print "Please enter 'y' or 'n'"
+
             break
         guess_count += 1
     else:
         print "Please choose a number between 1 and 100."
         # break 
-        
+     
 
 
 
          #add guess counter
+
 
 
 
