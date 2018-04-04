@@ -15,22 +15,22 @@ while True:
     except:
         print "That was not a number. Please try again!"
 
-# while True: 
+ while True: 
     if guess <= 100 and guess >= 1:
         #print 'Good job, let us see if it is close to the secret number'
         if guess > secret_num:
             print 'Your guess is too high, please try again.'
-            # break
+            break
         elif guess < secret_num:
             print 'Your guess is too low, please try again.'
-            # break
+            break
         else:
             print 'Congratulations %s! You found my number in %s tries!' % (name, guess_count)
             break
         guess_count += 1
     else:
         print "Please choose a number between 1 and 100."
-        # break 
+        break 
         
 
 
